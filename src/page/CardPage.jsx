@@ -7,7 +7,7 @@ import phone from '../assets/icons/mobile-bouton.svg'
 import mail from '../assets/icons/enveloppe.svg'
 import linkedin from '../assets/icons/linkedin.svg'
 import twitter from '../assets/icons/twitter.svg'
-import avatar from '../assets/images/avatar.jpg'
+import avatar from '../assets/images/avatar.jpeg'
 import arrowRight from '../assets/icons/arrow-right.svg'
 
 const fadAnimation = keyframes`
@@ -213,6 +213,7 @@ const Avatar = styled.div`
   overflow: hidden;
 
   img {
+    object-fit: cover;
     width: 100%;
   } 
 `
