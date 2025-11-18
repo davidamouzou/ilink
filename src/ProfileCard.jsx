@@ -1,14 +1,14 @@
-import styled, {keyframes} from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-import video from '../assets/video/video.mp4'
-import github from '../assets/icons/github.svg'
-import instagram from '../assets/icons/instagram.svg'
-import phone from '../assets/icons/mobile-bouton.svg'
-import mail from '../assets/icons/enveloppe.svg'
-import linkedin from '../assets/icons/linkedin.svg'
-import twitter from '../assets/icons/twitter.svg'
-import avatar from '../assets/images/avatar.jpeg'
-import arrowRight from '../assets/icons/arrow-right.svg'
+import video from './assets/video/video.mp4'
+import github from './assets/icons/github.svg'
+import instagram from './assets/icons/instagram.svg'
+import phone from './assets/icons/mobile-bouton.svg'
+import mail from './assets/icons/enveloppe.svg'
+import linkedin from './assets/icons/linkedin.svg'
+import twitter from './assets/icons/twitter.svg'
+import avatar from './assets/images/avatar.jpeg'
+import arrowRight from './assets/icons/arrow-right.svg'
 
 const fadAnimation = keyframes`
   from {
@@ -231,69 +231,66 @@ const ActivityName = styled.h2`
   font-size: 0.9rem;
   color: white;
 `
-function CardPage() {
-    return (
-        <Container>
-            <Card>
-                <CardHeader>
-                    <Video autoPlay loop muted src={video}/>
-                    <Barnner>
-                        <HeaderPadding>
-                            <Circle>
-                                <Avatar>
-                                    <img src={avatar} alt='avatar'/>
-                                </Avatar>
-                            </Circle>
-                            <SizedBox height='2em' width='1.5em'/>
-                            <ActivityName>SOFTWARE ENGINEER</ActivityName>
-                            <SizedBox height='1.5em' width='1em'/>
-                            <FlexBox>
-                                <HeaderContent>
-                                    <TitleHeader>Amouzou David</TitleHeader>
-                                    <SizedBox height='1.5em' width='1em'/>
-                                    <p>Etiam lorem ipsum, suspendisse faucibus sed interdum posuere lorem ipsum
-                                        dolor.</p>
-                                </HeaderContent>
-                                <SizedBox width='2em'/>
-                                <Wrap>
-                                    <IconButton duration='200ms'>
-                                        <img src={github} alt="github"/>
-                                    </IconButton>
-                                    <IconButton duration='400ms'>
-                                        <img src={instagram} alt="instagram"/>
-                                    </IconButton>
-                                    <IconButton duration='600ms'>
-                                        <img src={phone} alt="phone"/>
-                                    </IconButton>
-                                    <IconButton duration='800ms'>
-                                        <img src={twitter} alt="twitter"/>
-                                    </IconButton>
-                                    <IconButton duration='1000ms'>
-                                        <img src={mail} alt="mail"/>
-                                    </IconButton>
-                                    <IconButton duration='1200ms'>
-                                        <img src={linkedin} alt="linkedin"/>
-                                    </IconButton>
-                                </Wrap>
-                            </FlexBox>
-                        </HeaderPadding>
-                    </Barnner>
-                </CardHeader>
-                <CardBody>
-                    <Content>
-                        <TitleBody>Massa vitae</TitleBody>
-                        <p>Sed imperdiet dui amet nulla sed viverra tellus, lectus urna veroeros.</p>
-                    </Content>
-                    <Divider/>
-                    <Content>
-                        <Button>Etiam faucibus <img src={arrowRight} alt='arrow-right'/></Button>
-                        <SizedBox height='1em' width='1em'/>
-                        <Button>Sed interdum <img src={arrowRight} alt='arrow-right'/></Button>
-                    </Content>
-                </CardBody>
-            </Card>
-        </Container>
-    )
+export function ProfileCard() {
+  return (
+    <Container>
+      <Card>
+        <CardHeader>
+          <Video autoPlay loop muted src={video} />
+          <Barnner>
+            <HeaderPadding>
+              <Circle>
+                <Avatar>
+                  <img src={avatar} alt='avatar' />
+                </Avatar>
+              </Circle>
+              <SizedBox height='2em' width='1.5em' />
+              <ActivityName>SOFTWARE ENGINEER · AI PRACTITIONER</ActivityName>
+              <SizedBox height='1.5em' width='1em' />
+              <FlexBox>
+                <HeaderContent>
+                  <TitleHeader>Amouzou David</TitleHeader>
+                  <SizedBox height='1.5em' width='1em' />
+                  <p>ML engineer building production-ready systems and reliable AI services.</p>
+                </HeaderContent>
+                <SizedBox width='2em' />
+                <Wrap>
+                  <IconButton href="https://github.com/davidamouzou" target="_blank" rel="noopener noreferrer">
+                    <img src={github} alt="github" />
+                  </IconButton>
+                  <IconButton href="https://www.instagram.com/amzdavid/?next=%2F" target="_blank" rel="noopener noreferrer">
+                    <img src={instagram} alt="instagram" />
+                  </IconButton>
+                  <IconButton href="tel:">
+                    <img src={phone} alt="phone" />
+                  </IconButton>
+                  <IconButton href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src={twitter} alt="twitter" />
+                  </IconButton>
+                  <IconButton href="mailto:davidamzou@gmail.com">
+                    <img src={mail} alt="mail" />
+                  </IconButton>
+                  <IconButton href="https://www.linkedin.com/in/davidamouzou/" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} alt="linkedin" />
+                  </IconButton>
+                </Wrap>
+              </FlexBox>
+            </HeaderPadding>
+          </Barnner>
+        </CardHeader>
+        <CardBody>
+          <Content>
+            <TitleBody>Core Skills</TitleBody>
+            <p>ML model deployment · Data engineering · Production system design</p>
+          </Content>
+          <Divider />
+          <Content>
+            <Button>Projects <img src={arrowRight} alt='arrow-right' /></Button>
+            <SizedBox height='1em' width='1em' />
+            <Button>Contact <img src={arrowRight} alt='arrow-right' /></Button>
+          </Content>
+        </CardBody>
+      </Card>
+    </Container>
+  )
 }
-
-export default CardPage
