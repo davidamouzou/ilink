@@ -174,12 +174,12 @@ const Wrap = styled.div`
   }
 `
 
-const IconButton = styled.button`
+const IconButton = styled.a`
   border-radius: 100%;
   margin: 0 1em 1em 0;
   background-color: white;
-  width: 4em;
-  height: 4em;
+  width: 1.5em;
+  height: 1.5em;
   display: flex;
   cursor: pointer;
   padding: 0.8em;
