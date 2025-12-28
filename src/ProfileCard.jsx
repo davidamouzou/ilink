@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-
 import video from './assets/video/video.mp4'
 import github from './assets/icons/github.svg'
 import instagram from './assets/icons/instagram.svg'
@@ -285,9 +284,13 @@ export function ProfileCard() {
           </Content>
           <Divider />
           <Content>
-            <Button>Projects <img src={arrowRight} alt='arrow-right' /></Button>
+            <a href='https://porte.vercel.app/projects'>
+              <Button>Projects <img src={arrowRight} alt='arrow-right' /></Button>
+            </a>
             <SizedBox height='1em' width='1em' />
-            <Button>Contact <img src={arrowRight} alt='arrow-right' /></Button>
+            <a href='https://porte.vercel.app/'>
+              <Button>Contact <img src={arrowRight} alt='arrow-right' /></Button>
+            </a>
           </Content>
         </CardBody>
       </Card>
